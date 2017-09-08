@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducers';
 
 import 'semantic-ui-css/semantic.min.css';
 
@@ -8,9 +10,15 @@ import './style.less';
 
 import Header from './component/Header';
 
+const store = createStore(
+  reducers,
+);
+
+const action = type => store.dispatch({ type });
+
 render(
   <div>
-    <Header />
+    <Header data={store.getState()} />
   </div>,
   document.getElementById('root'),
 );
