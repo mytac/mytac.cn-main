@@ -4,7 +4,7 @@
   "description": "mytac's homepage",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot --port 1995"
+    "dev": "webpack-dev-server --hot --inline --port 1995"
   },
   "repository": {
     "type": "git",
@@ -48,6 +48,8 @@
     "react-dom": "^15.6.1",
     "react-hammerjs": "^0.5.0",
     "react-redux": "^5.0.5",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.72.0"
   }
 }
