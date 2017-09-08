@@ -1,0 +1,53 @@
+{
+  "name": "mytac.cn-main",
+  "version": "1.0.0",
+  "description": "mytac's homepage",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot --port 1995"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mytac/mytac.cn-main.git"
+  },
+  "keywords": [
+    "homepage"
+  ],
+  "author": "mytac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mytac/mytac.cn-main/issues"
+  },
+  "homepage": "https://github.com/mytac/mytac.cn-main#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "less-loader": "^4.0.4",
+    "redux-devtools": "^3.4.0",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "dependencies": {
+    "less": "^2.7.2",
+    "moment": "^2.18.1",
+    "prop-types": "^15.5.10",
+    "rc-time-picker": "^2.4.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-hammerjs": "^0.5.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2"
+  }
+}
