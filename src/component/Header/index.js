@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from 'semantic-ui-react';
 import './style.less';
 
-const handleStyle = (positionY = '100%', img = '\'https://image.freepik.com/free-vector/pink-polygonal-background_23-2147495183.jpg\'') => (
+const handleStyle = (positionY = '100%', img) => (
   { positionY, backgroundImage: `url(${img})` }
 );
 
