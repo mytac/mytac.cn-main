@@ -3,6 +3,7 @@ import 'animate.css';
 
 import './style.less';
 import { LeftBtn, RightBtn } from './Button';
+import Poster from './Poster';
 
 export default class Gallery extends React.Component {
   constructor(props) {
@@ -65,7 +66,7 @@ export default class Gallery extends React.Component {
     const { index, animateKlass } = this.state;
     return (
       <div className="gallery">
-        <div alt="" className={`img animated ${animateKlass}`} style={{ backgroundImage: `url(${imgArray[index]})` }} />
+        <Poster animateKlass={animateKlass} imgUrl={imgArray[index]} />
         <div className="btn-wrapper">
           <LeftBtn event={() => this.changeIndex('left')} />
           <RightBtn event={() => this.changeIndex('right')} />
