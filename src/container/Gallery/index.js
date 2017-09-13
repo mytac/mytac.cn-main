@@ -47,12 +47,13 @@ export default class Gallery extends React.Component {
         };
       });
     }, 50);
-    clearInterval(this.timer);
 
+    clearInterval(this.timer);
     if (caller) {
       this.autoSlide();
     } else {
-      setTimeout(() => {
+      clearInterval(this.recallTimerId);
+      this.recallTimerId = setTimeout(() => {
         this.autoSlide();
       }, 2000);
     }
