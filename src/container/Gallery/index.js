@@ -39,12 +39,12 @@ export default class Gallery extends React.Component {
         if (type === 'left') {
           return {
             index: prev === 0 ? len - 1 : prev -= 1,
-            animateKlass: 'slideInLeft',
+            animateKlass: 'slideInRight',
           };
         }
         return {
           index: prev === len - 1 ? 0 : prev += 1,
-          animateKlass: 'slideInRight',
+          animateKlass: 'slideInLeft',
         };
       });
     }, 50);
