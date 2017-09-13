@@ -27,6 +27,7 @@ export default class Gallery extends React.Component {
   }
 
   changeIndex(type, caller) {
+    const { transferNum } = this.props;
     /* eslint-disable no-return-assign, no-param-reassign */
     this.setState({
       animateKlass: '',
@@ -34,21 +35,25 @@ export default class Gallery extends React.Component {
 
     setTimeout(() => {
       this.setState((prevState, props) => {
+        transferNum(this.state.index);
         let prev = prevState.index;
         const len = props.imgArray.length;
         if (type === 'left') {
+          const index = prev === 0 ? len - 1 : prev -= 1;
+          transferNum(index);
           return {
-            index: prev === 0 ? len - 1 : prev -= 1,
+            index,
             animateKlass: 'slideInRight',
           };
         }
+        const index = prev === len - 1 ? 0 : prev += 1;
+        transferNum(index);
         return {
-          index: prev === len - 1 ? 0 : prev += 1,
+          index,
           animateKlass: 'slideInLeft',
         };
       });
     }, 50);
-
     clearInterval(this.timer);
     if (caller) {
       this.autoSlide();

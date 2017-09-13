@@ -6,8 +6,7 @@ import 'semantic-ui-css/semantic.min.css';
 import './reset.less';
 import './style.less';
 
-import Header from './component/Header';
-import Gallery from './container/Gallery';
+import Root from './container/Root';
 
 const tempPics = [
   'https://image.freepik.com/free-vector/pink-polygonal-background_23-2147495183.jpg',
@@ -18,8 +17,7 @@ const tempPics = [
 
 render(
   <div>
-    <Header />
-    <Gallery imgArray={tempPics} />
+    <Root imgArray={tempPics} />
   </div>,
   document.getElementById('root'),
 );
