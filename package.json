@@ -4,7 +4,7 @@
   "description": "mytac's homepage",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot --inline --port 1995"
+    "dev": "webpack-dev-server --hot --inline --port 1995 --host 192.168.10.248"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "less": "^2.7.2",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
