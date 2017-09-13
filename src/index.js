@@ -11,9 +11,9 @@ import Gallery from './container/Gallery';
 
 const tempPics = [
   'https://image.freepik.com/free-vector/pink-polygonal-background_23-2147495183.jpg',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd5SBjyuQs-Xsiz5bqPpP7MZeEaFB7hQ3A56ZBre4O5bmozbHy',
-  'https://i.pinimg.com/736x/3a/4d/69/3a4d693a3f2a7f49944a331e3bd207e6--kawaii-things-kawaii-stuff.jpg',
-  'https://i.pinimg.com/736x/15/27/5d/15275d3b4b2c5696ffc6e54b6cbd968a--art-drawings-kawaii.jpg',
+  'http://desk.fd.zol-img.com.cn/t_s960x600c5/g5/M00/0D/09/ChMkJlf8ljeIa5fKABQp0_GXxjYAAWzegKsIMwAFCnr514.jpg',
+  'http://img06.tooopen.com/images/20170514/tooopen_sy_210122159348.jpg',
+  'http://desk.fd.zol-img.com.cn/t_s960x600c5/g3/M03/0D/03/Cg-4V1S_EOWIMyUCAAhG5zFfIHUAATsVQNFKM0ACEb_770.jpg',
 ];
 
 render(
