@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../component/Header';
 import Gallery from '../container/Gallery';
+import Trendings from '../container/Trendings';
 
 export default class Root extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ export default class Root extends React.Component {
       <div>
         <Header img={imgArray[this.state.picIndex]} />
         <Gallery imgArray={imgArray} transferNum={this.transferNum} />
+        <Trendings/>
       </div>
     )
     ;
