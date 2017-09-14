@@ -8,11 +8,15 @@ export default class Trendings extends React.Component {
   }
 
   render() {
+    const { imgArray } = this.props;
     return (
       <div className="trendings">
-        <Poster />
-        <Poster />
-        <Poster />
+        <div className="posters-wrapper">
+          <Poster imgUrl={imgArray[0]} />
+          <Poster imgUrl={imgArray[1]} />
+          <Poster imgUrl={imgArray[2]} />
+          <Poster imgUrl={imgArray[3]} />
+        </div>
       </div>
     );
   }

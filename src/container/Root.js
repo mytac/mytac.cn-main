@@ -25,7 +25,7 @@ export default class Root extends React.Component {
       <div>
         <Header img={imgArray[this.state.picIndex]} />
         <Gallery imgArray={imgArray} transferNum={this.transferNum} />
-        <Trendings/>
+        <Trendings imgArray={imgArray}/>
       </div>
     )
     ;
