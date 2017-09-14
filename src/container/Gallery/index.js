@@ -1,4 +1,5 @@
 import React from 'react';
+import Hammer from 'react-hammerjs';
 import 'animate.css';
 
 import './style.less';
@@ -71,7 +72,14 @@ export default class Gallery extends React.Component {
     const { index, animateKlass } = this.state;
     return (
       <div className="gallery">
-        <Poster animateKlass={animateKlass} imgUrl={imgArray[index]} />
+        {/* 这里需要在react-hammer中添加onSwipeLeft、onSwipeRight这两个事件 */}
+        {/* onSwipeRight: 'swiperight',onSwipeLeft: 'swipeleft', */}
+        <Hammer
+          onSwipeLeft={() => this.changeIndex('left')}
+          onSwipeRight={() => this.changeIndex('right')}
+        >
+          <Poster animateKlass={animateKlass} imgUrl={imgArray[index]} />
+        </Hammer>
         <div className="btn-wrapper">
           <LeftBtn event={() => this.changeIndex('left')} />
           <RightBtn event={() => this.changeIndex('right')} />
