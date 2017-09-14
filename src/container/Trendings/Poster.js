@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Poster({ imgUrl }) {
+export default function Poster({ imgUrl, isStartMove }) {
   return (
-    <div className="poster">
+    <div className={`poster ${isStartMove && 'test'}`}>
       <div className="bg" style={{ backgroundImage: `url(${imgUrl})` }} >
         <div className="filter-layout" />
       </div>
