@@ -1,3 +1,14 @@
+@keyframes filter-in {
+  0% { height: 0; }
+  100% {height: 100%;  }
+}
+
+@keyframes filter-out {
+  0% { height: 100%; }
+  100% {height: 0;  }
+}
+
+
 .trendings{
   padding:30px 2% 0;
   height:100%;
@@ -11,18 +22,26 @@
       position:relative;
       width: 100%;
       height:200px;
-      background-color: brown;
       margin-right: 10px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      -webkit-filter: contrast(103%) brightness(87%) saturate(89%) sepia(24%) invert(21%) hue-rotate(326deg);
+      filter: contrast(103%) brightness(87%) saturate(89%) sepia(24%) invert(21%) hue-rotate(326deg);
       .filter-layout{
         width: 100%;
-        height:inherit;
+        height:0;
         position: relative;
         z-index: 20;
-        opacity: 0.3;
-        background-color: #2f7b96;
+        opacity: 0.5;
+        background-color: #404040;
+        animation: filter-out 0.5s;
+      }
+      &:hover{
+        .filter-layout{
+          height:100%;
+          animation: filter-in 0.5s;
+        }
       }
     }
   }
