@@ -2,12 +2,21 @@ import React from 'react';
 import './style.less';
 import Poster from './Poster';
 
+// 固定生成8个poster块
+const handleImgArray = (arr) => {
+  const LEN = arr.length;
+  const head = arr.slice(LEN - 2, LEN);
+  const mid = arr.slice(0, 4);
+  const tailPos = LEN > 4 ? (LEN - (LEN % 4) - (4 * parseInt(((LEN / 4) - 1), 10))) : 0;
+  const tail = [arr[tailPos], arr[tailPos + 1] || 0];
+  return [].concat(head).concat(mid).concat(tail);
+};
+
 export default class Trendings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isStartMove: false, // 是否开始滑动
-      isShowHeader: false, // 是否显示头部块
       index: 0,
     };
     this.autoSlide = this.autoSlide.bind(this);
@@ -22,29 +31,16 @@ export default class Trendings extends React.Component {
       isStartMove: true,
 
     });
-/*    setTimeout(() => {
-      this.setState(prev => ({
-        // index: prev.index += 1,
-        isShowHeader: true,
-        isStartMove: false,
-      }));
-    }, 2500);*/
   }
 
   render() {
     const { imgArray } = this.props;
-    const { isStartMove, isShowHeader } = this.state;
+    const { isStartMove } = this.state;
+    const handledImgArrs = handleImgArray(imgArray);
     return (
       <div className="trendings">
         <div className="posters-wrapper">
-          <Poster imgUrl={imgArray[0]} isStartMove={isStartMove} />
-          <Poster imgUrl={imgArray[1]} isStartMove={isStartMove} />
-          <Poster imgUrl={imgArray[2]} isStartMove={isStartMove} />
-          <Poster imgUrl={imgArray[0]} isStartMove={isStartMove} />
-          <Poster imgUrl={imgArray[1]} isStartMove={isStartMove} />
-          <Poster imgUrl={imgArray[2]} isStartMove={isStartMove} />
-          <Poster imgUrl={imgArray[2]} isStartMove={isStartMove} />
-          <Poster imgUrl={imgArray[2]} isStartMove={isStartMove} />
+          {handledImgArrs.map((img, idx) => <Poster imgUrl={img} isStartMove={isStartMove} key={`${img}-${idx}`} />)}
         </div>
       </div>
     );
