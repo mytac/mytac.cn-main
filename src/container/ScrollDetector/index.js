@@ -15,7 +15,7 @@ export default class ScrollDetector extends React.Component {
   getRect() {
     const { bottom, height } = this.focusTextInput.parentNode.getBoundingClientRect();
     const { getChildState } = this.props;
-    getChildState((bottom - height) < (this.viewHeight * 0.75));
+    getChildState((bottom - height) < (this.viewHeight * 0.65));
   }
 
   render() {
