@@ -1,5 +1,6 @@
 import React from 'react';
 import PropType from 'prop-types';
+import ScrollDetector from '../ScrollDetector';
 import Title from '../../component/Title';
 import StoryPage from '../../component/StoryPage';
 import './style.less';
@@ -9,11 +10,23 @@ const temp = 'Milk the cow kitty scratches couch bad kitty. Chase red laser dot 
 export default class Featured extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isShow: false,
+    };
+    this.getChildState = this.getChildState.bind(this);
+  }
+
+  getChildState(state) {
+    this.setState({
+      isShow: state,
+    });
   }
 
   render() {
+    const { isShow } = this.state;
     return (
-      <div className="featured">
+      <div className={`featured animated ${isShow ? 'fadeIn' : 'fadeOut'}`}>
+        <ScrollDetector getChildState={this.getChildState} />
         <Title title="FEATURED" />
         <div className="pages-wrapper">
           <StoryPage content={temp} img="https://image.freepik.com/free-vector/pink-polygonal-background_23-2147495183.jpg" title="this is title" />

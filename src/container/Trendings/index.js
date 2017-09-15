@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.less';
+import ScrollDetector from '../ScrollDetector';
 import Poster from './Poster';
 import Title from '../../component/Title';
 
@@ -19,8 +20,10 @@ export default class Trendings extends React.Component {
     this.state = {
       isStartMove: false, // 是否开始滑动
       index: 0,
+      isShow: false,
     };
     this.autoSlide = this.autoSlide.bind(this);
+    this.getChildState = this.getChildState.bind(this);
   }
   componentDidMount() {
     this.autoSlide();
@@ -34,12 +37,19 @@ export default class Trendings extends React.Component {
     });
   }
 
+  getChildState(state) {
+    this.setState({
+      isShow: state,
+    });
+  }
+
   render() {
     const { imgArray } = this.props;
-    const { isStartMove } = this.state;
+    const { isStartMove, isShow } = this.state;
     const handledImgArrs = handleImgArray(imgArray);
     return (
-      <div className="trendings">
+      <div className={`trendings animated ${isShow ? 'fadeIn' : 'fadeOut'}`}>
+        <ScrollDetector getChildState={this.getChildState} />
         <Title title="TRENDINGS" />
         <div className="posters-wrapper">
           {handledImgArrs.map((img, idx) => <Poster imgUrl={img} isStartMove={isStartMove} key={`${img}-${idx}`} />)}
