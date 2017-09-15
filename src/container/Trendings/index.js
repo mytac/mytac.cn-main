@@ -39,6 +39,7 @@ export default class Trendings extends React.Component {
     const handledImgArrs = handleImgArray(imgArray);
     return (
       <div className="trendings">
+        <div className="title"><span>TRENDING</span></div>
         <div className="posters-wrapper">
           {handledImgArrs.map((img, idx) => <Poster imgUrl={img} isStartMove={isStartMove} key={`${img}-${idx}`} />)}
         </div>
