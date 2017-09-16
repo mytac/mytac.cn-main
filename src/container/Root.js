@@ -4,6 +4,7 @@ import Header from '../component/Header';
 import Gallery from '../container/Gallery';
 import Trendings from '../container/Trendings';
 import Featured from '../container/Featured';
+import ContextWrapper from '../container/Context-wrapper';
 
 export default class Root extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ export default class Root extends React.Component {
         <Gallery imgArray={imgArray} transferNum={this.transferNum} />
         <Trendings imgArray={imgArray} />
         <Featured />
+        <ContextWrapper imgArr={imgArray} />
       </div>
     )
     ;
