@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './style.less';
 import LittlePage from '../../component/LittlePage';
 
 export default class ContextWrapper extends React.Component {

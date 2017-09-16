@@ -1,16 +1,64 @@
-.little-page{
-  .pic{
-    img{
-      width:600px;
-      height:395px;
+ .little-page{
+    width:25%;
+    padding:10px;
+    float: left;
+    .pic{
+      -webkit-filter: contrast(103%) brightness(87%) saturate(89%) sepia(24%) invert(21%) hue-rotate(326deg);
+      filter: contrast(103%) brightness(87%) saturate(89%) sepia(24%) invert(21%) hue-rotate(326deg);
+      height:270px;
+      width:100%;
+      z-index:0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .content{
+      position: relative;
+      width: 100%;
+      .rm-btn-square{
+        position: absolute;
+        z-index: 2;
+        top:-22px;
+        right:10%;
+        width:42px;
+        height:42px;
+        background-color: #050b1c;
+        transform: rotate(135deg) translateZ(0);
+        transition:all 0.2s ease;
+        backface-visibility: hidden;
+        &:before{
+          width:1px;
+          height:100%;
+          content:'';
+          background-color: #ffffff;
+          position: absolute;
+          right:5px;
+          left:20px;
+          transform: rotate(135deg) translateZ(0);
+          transition:all 0.2s ease;
+          backface-visibility: hidden;
+        }
+        &:after{
+          width:1px;
+          height:100%;
+          content:'';
+          background-color: #ffffff;
+          position: absolute;
+          right:5px;
+          left:20px;
+          transform: rotate(135deg) translateZ(0);
+        }
+      }
+    }
+    &:hover{
+      .pic{
+        background-position-x: 5px;
+        transition:all 0.5s ease;
+      }
+      .rm-btn-square{
+        &:before{
+          transform: rotate(45deg) translateZ(0);
+          transition:all 0.1s ease;
+        }
+      }
     }
   }
-  .rm-btn{
-    width:42px;
-    height:42px;
-    background-color: #050b1c;
-    transform: rotate(135deg) translateZ(0);
-    transition:all 0.2s ease;
-    backface-visibility: hidden;
-  }
-}
