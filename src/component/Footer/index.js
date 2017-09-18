@@ -1,4 +1,6 @@
 import React from 'react';
+import FeaturedSolid from '../../container/FeaturedSolid';
+
 import './style.less';
 
 import About from './About';
@@ -11,7 +13,7 @@ export default function Footer({ avatarUrl }) {
         <About avatarUrl={avatarUrl} />
         <FollowOn />
       </div>
-
+      <FeaturedSolid />
     </div>
   );
 }
