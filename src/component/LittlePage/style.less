@@ -4,7 +4,7 @@
   content:'';
   background-color: @color;
   position: absolute;
-  transition:all 0.2s ease;
+  transition:all 0.1s ease;
   backface-visibility: hidden;
 }
 
@@ -69,12 +69,14 @@
         font-size: .89em;
         margin-bottom: 20px;
         padding-left: 60px;
+        transition:all 0.4s ease;
         &::before{
           position: absolute;
           left: 0;
           top:50%;
           transform: translateY(-50%);
           .before-after-block(50px,2px,#000000);
+          transition:all 0.1s ease;
         }
       }
       .title{
@@ -95,6 +97,7 @@
           top:50%;
           transform: translateY(-50%);
           .before-after-block(0px,2px,#000000);
+          transition:all 0.4s ease;
         }
       }
     }
@@ -104,9 +107,9 @@
         transition:all 0.5s ease;
       }
       .date{
-        padding-left:60px;
+        padding-left:0;
         &::before{
-          width:50px;
+          width:0;
         }
       }
       .rm-btn-square{
@@ -118,10 +121,8 @@
       }
       a.more-link{
         padding-left:60px;
-        transition:all 0.1s ease;
         &::before{
           width:50px;
-          transition:all 0.1s ease;
         }
       }
     }
