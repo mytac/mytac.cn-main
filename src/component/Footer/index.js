@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.less';
 
-import About from '../../component/About';
+import About from './About';
 
 export default function Footer({ avatarUrl }) {
   return (
