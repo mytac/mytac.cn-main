@@ -5,6 +5,7 @@ import Gallery from '../container/Gallery';
 import Trendings from '../container/Trendings';
 import Featured from '../container/Featured';
 import ContextWrapper from '../container/Context-wrapper';
+import Footer from '../component/Footer';
 
 export default class Root extends React.Component {
   constructor(props) {
@@ -30,6 +31,7 @@ export default class Root extends React.Component {
         <Trendings imgArray={imgArray} />
         <Featured />
         <ContextWrapper imgArr={imgArray} />
+        <Footer avatarUrl={imgArray[0]} imgArray={imgArray} />
       </div>
     )
     ;
