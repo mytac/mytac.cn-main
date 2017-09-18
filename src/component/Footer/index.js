@@ -6,14 +6,14 @@ import './style.less';
 import About from './About';
 import FollowOn from './FollowOn';
 
-export default function Footer({ avatarUrl }) {
+export default function Footer({ avatarUrl,imgArray }) {
   return (
     <div className="footer">
       <div className="left">
         <About avatarUrl={avatarUrl} />
         <FollowOn />
       </div>
-      <FeaturedSolid />
+      <FeaturedSolid imgArray={imgArray}/>
     </div>
   );
 }
