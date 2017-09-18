@@ -18,7 +18,7 @@ export default function FollowOn() {
     <div className="follow-on" >
       <Title title="FOLLOW ON" />
       <div className="links">
-        {myLinks.map(link => <SquareButton icon={`fa ${link.icon}`} title={link.icon} />)}
+        {myLinks.map(link => <SquareButton icon={`fa ${link.icon}`} title={link.icon} key={link.icon} />)}
       </div>
     </div>
   );

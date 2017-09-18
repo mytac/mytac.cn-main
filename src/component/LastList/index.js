@@ -6,16 +6,17 @@ import Title from '../Title';
 import ListItem from './ListItem';
 
 export default function LastList({ imgArray }) {
+  const renderList = imgArray.length > 3 ? imgArray.slice(0, 3) : imgArray;
   return (
     <div className="last-list">
       <Title title="LASTED" />
       <div className="item-wrapper">
-        {imgArray.map(img => <ListItem imgUrl={img} />)}
+        {renderList.map(img => <ListItem imgUrl={img} key={img} />)}
       </div>
     </div>
   );
 }
 
 LastList.propTypes = {
-  imgArray: PropTypes.string.isRequired,
+  imgArray: PropTypes.array.isRequired,
 };
