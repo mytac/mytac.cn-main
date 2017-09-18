@@ -13,7 +13,7 @@ export default class ContextWrapper extends React.Component {
     const { imgArr } = this.props;
     return (
       <div className="context-wrapper">
-        {imgArr.map(imgUrl => <LittlePage img={imgUrl} />)}
+        {imgArr.map((imgUrl, index) => <LittlePage img={imgUrl} key={`${index}-${imgUrl}`} />)}
       </div>
     );
   }
