@@ -31,7 +31,7 @@ export default class Root extends React.Component {
         <Trendings imgArray={imgArray} />
         <Featured />
         <ContextWrapper imgArr={imgArray} />
-        <Footer />
+        <Footer avatarUrl={imgArray[0]} />
       </div>
     )
     ;

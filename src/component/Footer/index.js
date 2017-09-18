@@ -3,11 +3,10 @@ import './style.less';
 
 import About from '../../component/About';
 
-export default function Footer() {
+export default function Footer({ avatarUrl }) {
   return (
-    <div className="footered">
-        11
-      <About />
+    <div className="footer">
+      <About avatarUrl={avatarUrl} />
     </div>
   );
 }
