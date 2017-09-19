@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hammer from 'react-hammerjs';
 import 'animate.css';
 
@@ -78,7 +79,7 @@ export default class Gallery extends React.Component {
           onSwipeLeft={() => this.changeIndex('left')}
           onSwipeRight={() => this.changeIndex('right')}
         >
-          <Poster animateKlass={animateKlass} imgUrl={imgArray[index]} />
+          <Link to="/123"><Poster animateKlass={animateKlass} imgUrl={imgArray[index]} /></Link>
         </Hammer>
         <div className="btn-wrapper">
           <LeftBtn event={() => this.changeIndex('left')} />
