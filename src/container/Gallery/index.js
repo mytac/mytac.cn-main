@@ -67,6 +67,9 @@ export default class Gallery extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
 
   render() {
     const { imgArray } = this.props;
