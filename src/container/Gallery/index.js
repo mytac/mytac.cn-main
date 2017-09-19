@@ -22,6 +22,12 @@ export default class Gallery extends React.Component {
     this.autoSlide();
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    clearTimeout(this.timeOutTimer);
+    clearTimeout(this.recallTimerId);
+  }
+
   autoSlide() {
     this.timer = setInterval(
       () => { this.changeIndex('left', 'auto'); }, 5000,
@@ -35,7 +41,7 @@ export default class Gallery extends React.Component {
       animateKlass: '',
     });
 
-    setTimeout(() => {
+    this.timeOutTimer = setTimeout(() => {
       this.setState((prevState, props) => {
         transferNum(this.state.index);
         let prev = prevState.index;
@@ -60,15 +66,11 @@ export default class Gallery extends React.Component {
     if (caller) {
       this.autoSlide();
     } else {
-      clearInterval(this.recallTimerId);
+      clearTimeout(this.recallTimerId);
       this.recallTimerId = setTimeout(() => {
         this.autoSlide();
       }, 2000);
     }
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer);
   }
 
   render() {
@@ -82,7 +84,7 @@ export default class Gallery extends React.Component {
           onSwipeLeft={() => this.changeIndex('left')}
           onSwipeRight={() => this.changeIndex('right')}
         >
-          <Link to="/123"><Poster animateKlass={animateKlass} imgUrl={imgArray[index]} /></Link>
+          <Link to={`/${index}`}><Poster animateKlass={animateKlass} imgUrl={imgArray[index]} /></Link>
         </Hammer>
         <div className="btn-wrapper">
           <LeftBtn event={() => this.changeIndex('left')} />
