@@ -1,6 +1,12 @@
 import React from 'react';
 import './style.less';
 
+// 定位到头部
+const toTop = () => {
+  document.documentElement.scrollTop = -200;
+  document.body.scrollTop = -200;
+};
+
 export default class ToTopButton extends React.Component {
   constructor(props) {
     super(props);
@@ -30,11 +36,17 @@ export default class ToTopButton extends React.Component {
     });
   }
 
-
   render() {
     return (
-      <div className="to-top-button" ref={(pos) => { this.focusTextInput = pos; }} style={{ display: !this.state.isShow && 'none' }}>
-        <i className="fa fa-chevron-up" aria-hidden="true" />
+      <div
+        className="to-top-button"
+        ref={(pos) => { this.focusTextInput = pos; }}
+        style={{ display: !this.state.isShow && 'none' }}
+        onClick={() => toTop()}
+      >
+        <i
+          className="fa fa-chevron-up"
+        />
       </div>
     );
   }
