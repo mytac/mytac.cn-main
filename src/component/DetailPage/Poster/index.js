@@ -4,8 +4,7 @@ import './style.less';
 
 export default function Poster({ imgUrl }) {
   return (
-    <div className="poster">
-      <img src={imgUrl} alt="" />
+    <div className="poster" style={{backgroundImage:`url(${imgUrl})`}}>
     </div>
   );
 }

@@ -6,14 +6,20 @@ import {
 
 import Header from '../../component/Header';
 import Poster from './Poster';
+
+import './style.less';
+
 // TODO: Header的背景图片为主内容中的图片，把props中的删了
 export default function DetailPage({ id, imgUrl }) {
   return (
     <div>
       <Header img={imgUrl[0]} />
-      <Poster imgUrl={imgUrl[1]} />
-      DetailPage:{id}
+      <div className="detail-page">
+        <Poster imgUrl={imgUrl[1]} />
+              DetailPage:{id}
+      </div>
     </div>
+
   );
 }
 
