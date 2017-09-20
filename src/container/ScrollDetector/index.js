@@ -8,8 +8,12 @@ export default class ScrollDetector extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', () => { this.getRect(); });
+    window.addEventListener('scroll', this.getRect, false);
     this.focusTextInput.focus();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.getRect, false);
   }
 
   getRect() {

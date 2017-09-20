@@ -15,9 +15,13 @@ export default class FeaturedSolid extends React.Component {
     this.autoPlay();
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
   autoPlay() {
     const LEN = this.props.imgArray.length;
-    setInterval(() => {
+    this.timer = setInterval(() => {
       this.setState(
         (prev) => {
           let prevIndex = prev.index;

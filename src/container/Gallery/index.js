@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hammer from 'react-hammerjs';
 import 'animate.css';
 
@@ -21,6 +22,12 @@ export default class Gallery extends React.Component {
     this.autoSlide();
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    clearTimeout(this.timeOutTimer);
+    clearTimeout(this.recallTimerId);
+  }
+
   autoSlide() {
     this.timer = setInterval(
       () => { this.changeIndex('left', 'auto'); }, 5000,
@@ -34,7 +41,7 @@ export default class Gallery extends React.Component {
       animateKlass: '',
     });
 
-    setTimeout(() => {
+    this.timeOutTimer = setTimeout(() => {
       this.setState((prevState, props) => {
         transferNum(this.state.index);
         let prev = prevState.index;
@@ -59,13 +66,12 @@ export default class Gallery extends React.Component {
     if (caller) {
       this.autoSlide();
     } else {
-      clearInterval(this.recallTimerId);
+      clearTimeout(this.recallTimerId);
       this.recallTimerId = setTimeout(() => {
         this.autoSlide();
       }, 2000);
     }
   }
-
 
   render() {
     const { imgArray } = this.props;
@@ -78,7 +84,7 @@ export default class Gallery extends React.Component {
           onSwipeLeft={() => this.changeIndex('left')}
           onSwipeRight={() => this.changeIndex('right')}
         >
-          <Poster animateKlass={animateKlass} imgUrl={imgArray[index]} />
+          <Link to={`/details/${index}`}><Poster animateKlass={animateKlass} imgUrl={imgArray[index]} /></Link>
         </Hammer>
         <div className="btn-wrapper">
           <LeftBtn event={() => this.changeIndex('left')} />
