@@ -4,7 +4,7 @@
   "description": "mytac's homepage",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot --inline --port 1995 --host 192.168.10.248"
+    "dev": "webpack-dev-server --progress --colors --hot --content-base ./server/public --history-api-fallback --config ./webpack.config.js --host 192.168.10.248 --port 1995"
   },
   "repository": {
     "type": "git",
