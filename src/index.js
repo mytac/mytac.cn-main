@@ -18,13 +18,13 @@ const tempPics = [
 ];
 
 const RootComponent = () => <Root imgArray={tempPics} />;
-const DetailComponent = ({ match }) => (<DetailPage id={match.params.id} />);
+const DetailComponent = ({ match }) => (<DetailPage id={match.params.id} imgArray={tempPics} />);
 
 const RouterComponent = () => (
   <Router>
     <div>
       <Route exact path="/" component={RootComponent} />
-      <Route path="/:id" component={DetailComponent} />
+      <Route path="/details/:id" component={DetailComponent} />
     </div>
   </Router>
 );

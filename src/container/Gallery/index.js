@@ -84,7 +84,7 @@ export default class Gallery extends React.Component {
           onSwipeLeft={() => this.changeIndex('left')}
           onSwipeRight={() => this.changeIndex('right')}
         >
-          <Link to={`/${index}`}><Poster animateKlass={animateKlass} imgUrl={imgArray[index]} /></Link>
+          <Link to={`/details/${index}`}><Poster animateKlass={animateKlass} imgUrl={imgArray[index]} /></Link>
         </Hammer>
         <div className="btn-wrapper">
           <LeftBtn event={() => this.changeIndex('left')} />
