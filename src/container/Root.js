@@ -6,6 +6,7 @@ import Trendings from '../container/Trendings';
 import Featured from '../container/Featured';
 import ContextWrapper from '../container/Context-wrapper';
 import Footer from '../component/Footer';
+import ToTopButton from '../component/ToTopButton';
 
 export default class Root extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ export default class Root extends React.Component {
         <Featured />
         <ContextWrapper imgArr={imgArray} />
         <Footer avatarUrl={imgArray[0]} imgArray={imgArray} />
+        <ToTopButton />
       </div>
     )
     ;
