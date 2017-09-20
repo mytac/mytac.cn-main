@@ -5,7 +5,10 @@ import './style.less';
 export default function Header({ title }) {
   return (
     <div className="Header">
-      <h2>{title}</h2>
+      <div className="text-wrapper">
+        <h2>{title}</h2>
+        <p className="footer-text">September 26,2017</p>
+      </div>
     </div>
   );
 }
