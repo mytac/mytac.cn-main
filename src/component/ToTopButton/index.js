@@ -4,9 +4,10 @@ import './style.less';
 // 定位到头部
 const toTop = () => {
   const osTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const speed = osTop / 200;
   const timer = setInterval(() => {
-    document.documentElement.scrollTop -= 40;
-    document.body.scrollTop -= 40;
+    document.documentElement.scrollTop -= 40 + speed;
+    document.body.scrollTop -= 40 + speed;
     if (document.body.scrollTop < 1) {
       clearInterval(timer);
     }
