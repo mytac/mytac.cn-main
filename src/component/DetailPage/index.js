@@ -6,6 +6,7 @@ import {
 
 import Header from '../../component/Header';
 import Poster from './Poster';
+import Articles from './Articles';
 
 import './style.less';
 
@@ -16,6 +17,7 @@ export default function DetailPage({ id, imgUrl }) {
       <Header img={imgUrl[0]} />
       <div className="detail-page">
         <Poster imgUrl={imgUrl[1]} />
+        <Articles />
               DetailPage:{id}
       </div>
     </div>
