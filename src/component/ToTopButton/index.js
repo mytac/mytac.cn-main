@@ -3,8 +3,14 @@ import './style.less';
 
 // 定位到头部
 const toTop = () => {
-  document.documentElement.scrollTop = -200;
-  document.body.scrollTop = -200;
+  const osTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const timer = setInterval(() => {
+    document.documentElement.scrollTop -= 40;
+    document.body.scrollTop -= 40;
+    if (document.body.scrollTop < 1) {
+      clearInterval(timer);
+    }
+  }, 10);
 };
 
 export default class ToTopButton extends React.Component {
@@ -12,7 +18,7 @@ export default class ToTopButton extends React.Component {
     super(props);
 
     this.state = {
-      isShow: true,
+      isShow: false,
     };
 
     this.viewHeight = document.documentElement.clientHeight;
