@@ -1,4 +1,5 @@
 import React from 'react';
+import Context from './Context';
 import PropTypes from 'prop-types';
 import './style.less';
 
@@ -13,6 +14,7 @@ export default function Articles() {
   return (
     <div className="article">
       <Header title={title} />
+      <Context />
     </div>
   );
 }
