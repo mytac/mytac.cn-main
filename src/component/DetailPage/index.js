@@ -7,9 +7,10 @@ import {
 import Header from '../../component/Header';
 import Poster from './Poster';
 import Articles from './Articles';
+import LeaveMsg from './LeaveMsg';
 import Footer from '../Footer';
 import './style.less';
-
+//               DetailPage:{id}
 // TODO: Header的背景图片为主内容中的图片，把props中的删了
 export default function DetailPage({ id, imgUrl }) {
   return (
@@ -18,7 +19,7 @@ export default function DetailPage({ id, imgUrl }) {
       <div className="detail-page">
         <Poster imgUrl={imgUrl[1]} />
         <Articles />
-              DetailPage:{id}
+        <LeaveMsg />
         <Footer avatarUrl={imgUrl[0]} imgArray={imgUrl} />
       </div>
     </div>
