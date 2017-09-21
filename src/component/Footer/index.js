@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './style.less';
 
 import About from './About';
@@ -18,3 +19,8 @@ export default function Footer({ avatarUrl, imgArray }) {
     </div>
   );
 }
+
+Footer.propTypes = {
+  avatarUrl: PropTypes.string.isRequired,
+  imgArray: PropTypes.array.isRequired,
+};

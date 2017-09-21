@@ -8,7 +8,7 @@ import './reset.less';
 import './style.less';
 
 import Root from './container/Root';
-import DetailPage from './container/DetailPage';
+import DetailPage from './component/DetailPage';
 
 const tempPics = [
   'https://image.freepik.com/free-vector/pink-polygonal-background_23-2147495183.jpg',
@@ -18,13 +18,13 @@ const tempPics = [
 ];
 
 const RootComponent = () => <Root imgArray={tempPics} />;
-const DetailComponent = ({ match }) => (<DetailPage id={match.params.id} imgArray={tempPics} />);
+const DetailComponent = ({ match }) => (<DetailPage id={match.params.id} imgUrl={tempPics} />);
 
 const RouterComponent = () => (
   <Router>
     <div>
       <Route exact path="/" component={RootComponent} />
-      <Route path="/details/:id" component={DetailComponent} />
+      <Route path="/:id" component={DetailComponent} />
     </div>
   </Router>
 );
