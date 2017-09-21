@@ -9,6 +9,7 @@ import Poster from './Poster';
 import Articles from './Articles';
 import LeaveMsg from './LeaveMsg';
 import Footer from '../Footer';
+import ToTopButton from '../ToTopButton';
 import './style.less';
 //               DetailPage:{id}
 // TODO: Header的背景图片为主内容中的图片，把props中的删了
@@ -21,6 +22,7 @@ export default function DetailPage({ id, imgUrl }) {
         <Articles />
         <LeaveMsg />
         <Footer avatarUrl={imgUrl[0]} imgArray={imgUrl} />
+        <ToTopButton />
       </div>
     </div>
 
