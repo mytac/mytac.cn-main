@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title } from '../../component/Common';
+import { Title } from '../../../component/Common/index';
 import './style.less';
 
 export default class FeaturedSolid extends React.Component {

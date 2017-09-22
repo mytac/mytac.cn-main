@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Header, ToTopButton, Footer } from '../Common';
-import Gallery from '../../container/Gallery';
-import Trendings from '../../container/Trendings';
+import { Trendings, Gallery } from '../../container/UIPlugins';
 import Featured from './Featured';
 import ContextWrapper from './Context-wrapper';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hammer from 'react-hammerjs';
-import 'animate.css';
+import '../../../../node_modules/animate.css/animate.css';
 
 import './style.less';
 import { LeftBtn, RightBtn } from './Button';
