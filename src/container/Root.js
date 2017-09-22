@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { Header, ToTopButton } from '../component/Common';
+import { Header, ToTopButton,Footer } from '../component/Common';
 import Gallery from '../container/Gallery';
 import Trendings from '../container/Trendings';
 import Featured from '../component/MainPage/Featured';
 import ContextWrapper from '../component/MainPage/Context-wrapper';
-import Footer from '../component/MainPage/Footer';
 
 export default class Root extends React.Component {
   constructor(props) {

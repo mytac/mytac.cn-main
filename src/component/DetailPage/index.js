@@ -4,11 +4,10 @@ import {
   Link,
 } from 'react-router';
 
-import { Header } from '../Common';
+import { Header, Footer } from '../Common';
 import Poster from './Poster';
 import Articles from './Articles';
 import LeaveMsg from './LeaveMsg';
-import Footer from '../MainPage/Footer';
 import ToTopButton from '../Common/ToTopButton';
 import './style.less';
 //               DetailPage:{id}
