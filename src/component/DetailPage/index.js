@@ -4,12 +4,12 @@ import {
   Link,
 } from 'react-router';
 
-import Header from '../../component/Header';
+import { Header } from '../Common';
 import Poster from './Poster';
 import Articles from './Articles';
 import LeaveMsg from './LeaveMsg';
 import Footer from '../MainPage/Footer';
-import ToTopButton from '../ToTopButton';
+import ToTopButton from '../Common/ToTopButton';
 import './style.less';
 //               DetailPage:{id}
 // TODO: Header的背景图片为主内容中的图片，把props中的删了

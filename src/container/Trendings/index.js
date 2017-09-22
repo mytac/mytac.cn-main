@@ -2,7 +2,7 @@ import React from 'react';
 import './style.less';
 import ScrollDetector from '../ScrollDetector';
 import Poster from './Poster';
-import Title from '../../component/Title';
+import { Title } from '../../component/Common';
 
 // 固定生成8个poster块
 const handleImgArray = (arr) => {

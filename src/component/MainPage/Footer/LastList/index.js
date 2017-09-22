@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.less';
 
-import Title from '../../../Title';
+import { Title } from '../../../Common';
 import ListItem from './ListItem';
 
 export default function LastList({ imgArray }) {

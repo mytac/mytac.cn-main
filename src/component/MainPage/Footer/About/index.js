@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './style.less';
-import Title from '../../../Title';
+import { Title } from '../../../Common';
 
 export default function About({ avatarUrl }) {
   return (

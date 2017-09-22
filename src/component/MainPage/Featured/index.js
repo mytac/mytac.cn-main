@@ -1,7 +1,7 @@
 import React from 'react';
 import PropType from 'prop-types';
 import ScrollDetector from '../../../container/ScrollDetector/index';
-import Title from '../../Title/index';
+import { Title } from '../../Common';
 import StoryPage from '../StoryPage/index';
 import './style.less';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReadMoreBtn from '../../ReadMoreBtn/index';
+import { ReadMoreBtn } from '../../Common';
 import './style.less';
 
 export default function StoryPage({ title, img, content }) {

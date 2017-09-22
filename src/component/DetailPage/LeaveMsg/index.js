@@ -1,7 +1,6 @@
 import React from 'react';
-import Title from '../../Title/index';
 import PropTypes from 'prop-types';
-import ReadMoreBtn from '../../ReadMoreBtn';
+import { Title, ReadMoreBtn } from '../../Common';
 import './style.less';
 
 const InputBox = ({ title }) => (
