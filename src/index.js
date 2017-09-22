@@ -7,7 +7,7 @@ import 'semantic-ui-css/semantic.min.css';
 import './reset.less';
 import './style.less';
 
-import Root from './container/Root';
+import MainPage from './component/MainPage';
 import DetailPage from './component/DetailPage';
 
 const tempPics = [
@@ -17,7 +17,7 @@ const tempPics = [
   'http://desk.fd.zol-img.com.cn/t_s960x600c5/g3/M03/0D/03/Cg-4V1S_EOWIMyUCAAhG5zFfIHUAATsVQNFKM0ACEb_770.jpg',
 ];
 
-const RootComponent = () => <Root imgArray={tempPics} />;
+const RootComponent = () => <MainPage imgArray={tempPics} />;
 const DetailComponent = ({ match }) => (<DetailPage id={match.params.id} imgUrl={tempPics} />);
 
 const RouterComponent = () => (

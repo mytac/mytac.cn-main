@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Header, ToTopButton,Footer } from '../component/Common';
-import Gallery from '../container/Gallery';
-import Trendings from '../container/Trendings';
-import Featured from '../component/MainPage/Featured';
-import ContextWrapper from '../component/MainPage/Context-wrapper';
+import { Header, ToTopButton, Footer } from '../Common';
+import Gallery from '../../container/Gallery';
+import Trendings from '../../container/Trendings';
+import Featured from './Featured';
+import ContextWrapper from './Context-wrapper';
 
-export default class Root extends React.Component {
+export default class MainPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
