@@ -9,6 +9,7 @@ import './style.less';
 
 import MainPage from './component/MainPage';
 import DetailPage from './component/DetailPage';
+import AdminPage from './component/AdminPage';
 
 const tempPics = [
   'https://image.freepik.com/free-vector/pink-polygonal-background_23-2147495183.jpg',
@@ -18,13 +19,15 @@ const tempPics = [
 ];
 
 const RootComponent = () => <MainPage imgArray={tempPics} />;
+const AdminComponent = () => <AdminPage />;
 const DetailComponent = ({ match }) => (<DetailPage id={match.params.id} imgUrl={tempPics} />);
 
 const RouterComponent = () => (
   <Router>
     <div>
       <Route exact path="/" component={RootComponent} />
-      <Route path="/:id" component={DetailComponent} />
+      <Route exact path="/admin" component={AdminComponent} />
+      <Route path="/detail/:id" component={DetailComponent} />
     </div>
   </Router>
 );
