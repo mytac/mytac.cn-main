@@ -8,7 +8,7 @@ import Header from '../../component/Header';
 import Poster from './Poster';
 import Articles from './Articles';
 import LeaveMsg from './LeaveMsg';
-import Footer from '../Footer';
+import Footer from '../MainPage/Footer';
 import ToTopButton from '../ToTopButton';
 import './style.less';
 //               DetailPage:{id}

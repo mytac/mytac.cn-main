@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ScrollDetector from '../ScrollDetector';
+import ScrollDetector from '../../../container/ScrollDetector/index';
 
 import './style.less';
-import LittlePage from '../../component/LittlePage';
+import LittlePage from '../LittlePage';
 
 export default class ContextWrapper extends React.Component {
   constructor(props) {

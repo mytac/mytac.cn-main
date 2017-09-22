@@ -4,8 +4,8 @@ import './style.less';
 
 import About from './About';
 import FollowOn from './FollowOn';
-import FeaturedSolid from '../../container/FeaturedSolid';
-import LastList from '../LastList';
+import FeaturedSolid from '../../../container/FeaturedSolid';
+import LastList from './LastList';
 
 export default function Footer({ avatarUrl, imgArray }) {
   return (

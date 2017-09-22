@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './style.less';
-import Title from '../../Title';
+import Title from '../../../Title';
 import SquareButton from './Square';
 
 const myLinks = [
