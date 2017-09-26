@@ -12,7 +12,8 @@ export default class AdminPage extends React.Component {
     if (str === realString) {
       this.str = str;
       // todo:react-router跳转
-      console.log(str);
+      console.log('success');
+      this.props.history.push('/#');
     }
   }
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import { render } from 'react-dom';
+import createHistory from 'history/createBrowserHistory';
 
 import 'semantic-ui-css/semantic.min.css';
 
@@ -11,6 +12,8 @@ import MainPage from './component/MainPage';
 import DetailPage from './component/DetailPage';
 import AdminPage from './component/AdminPage';
 
+const history = createHistory();
+
 const tempPics = [
   'https://image.freepik.com/free-vector/pink-polygonal-background_23-2147495183.jpg',
   'http://desk.fd.zol-img.com.cn/t_s960x600c5/g5/M00/0D/09/ChMkJlf8ljeIa5fKABQp0_GXxjYAAWzegKsIMwAFCnr514.jpg',
@@ -19,11 +22,11 @@ const tempPics = [
 ];
 
 const RootComponent = () => <MainPage imgArray={tempPics} />;
-const AdminComponent = () => <AdminPage />;
+const AdminComponent = () => <AdminPage history={history} />;
 const DetailComponent = ({ match }) => (<DetailPage id={match.params.id} imgUrl={tempPics} />);
 
 const RouterComponent = () => (
-  <Router>
+  <Router history={history}>
     <div>
       <Route exact path="/" component={RootComponent} />
       <Route exact path="/admin" component={AdminComponent} />
