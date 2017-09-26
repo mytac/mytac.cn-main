@@ -21,7 +21,7 @@ export default class Login extends React.Component {
     const { input } = this.state;
     return (
       <div className="Login">
-        <input type="password" id="psd1" onChange={this.handleChange} value={input} />
+        <input type="password" onChange={this.handleChange} value={input} />
         <button onClick={() => this.props.event(input)}>Go</button>
       </div>
     );

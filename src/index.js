@@ -11,6 +11,7 @@ import './style.less';
 import MainPage from './component/MainPage';
 import DetailPage from './component/DetailPage';
 import AdminPage from './component/AdminPage';
+import ManagePanel from './component/AdminPage/ManagePanel';
 
 const history = createHistory();
 
@@ -23,6 +24,7 @@ const tempPics = [
 
 const RootComponent = () => <MainPage imgArray={tempPics} />;
 const AdminComponent = () => <AdminPage history={history} />;
+const ManageComponent = () => <ManagePanel history={history} />;
 const DetailComponent = ({ match }) => (<DetailPage id={match.params.id} imgUrl={tempPics} />);
 
 const RouterComponent = () => (
@@ -30,6 +32,7 @@ const RouterComponent = () => (
     <div>
       <Route exact path="/" component={RootComponent} />
       <Route exact path="/admin" component={AdminComponent} />
+      <Route exact path="/manage" component={ManageComponent} />
       <Route path="/detail/:id" component={DetailComponent} />
     </div>
   </Router>

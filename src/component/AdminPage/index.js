@@ -13,7 +13,7 @@ export default class AdminPage extends React.Component {
       this.str = str;
       // todo:react-router跳转
       console.log('success');
-      this.props.history.push('/#');
+      this.props.history.push('/admin/manage');
     }
   }
 
