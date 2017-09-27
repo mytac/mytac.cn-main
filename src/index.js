@@ -1,14 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import { render } from 'react-dom';
+import createHistory from 'history/createBrowserHistory';
 
 import 'semantic-ui-css/semantic.min.css';
 
 import './reset.less';
 import './style.less';
 
-import Root from './container/Root';
+import MainPage from './component/MainPage';
 import DetailPage from './component/DetailPage';
+import AdminPage from './component/AdminPage';
+import ManagePanel from './component/AdminPage/ManagePanel';
+
+const history = createHistory();
 
 const tempPics = [
   'https://image.freepik.com/free-vector/pink-polygonal-background_23-2147495183.jpg',
@@ -17,14 +22,18 @@ const tempPics = [
   'http://desk.fd.zol-img.com.cn/t_s960x600c5/g3/M03/0D/03/Cg-4V1S_EOWIMyUCAAhG5zFfIHUAATsVQNFKM0ACEb_770.jpg',
 ];
 
-const RootComponent = () => <Root imgArray={tempPics} />;
+const RootComponent = () => <MainPage imgArray={tempPics} />;
+const AdminComponent = () => <AdminPage history={history} />;
+const ManageComponent = () => <ManagePanel history={history} />;
 const DetailComponent = ({ match }) => (<DetailPage id={match.params.id} imgUrl={tempPics} />);
 
 const RouterComponent = () => (
-  <Router>
+  <Router history={history}>
     <div>
       <Route exact path="/" component={RootComponent} />
-      <Route path="/:id" component={DetailComponent} />
+      <Route exact path="/admin" component={AdminComponent} />
+      <Route exact path="/manage" component={ManageComponent} />
+      <Route path="/detail/:id" component={DetailComponent} />
     </div>
   </Router>
 );

@@ -1,0 +1,35 @@
+@keyframes bgScroll {
+  0% { background-position-y: 0; }
+  50% { background-position-y: 100%;  }
+  100% { background-position-y: 0;  }
+}
+
+.header {
+  position: relative;
+  color: #ffffff;
+  font-size: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: 0;
+  animation: bgScroll 15s linear infinite;
+  .wrapper {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    .logo {
+      font-family: 'hello';
+      vertical-align: middle;
+      height: 100%;
+      span {
+        height: 100%;
+        line-height: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.header:hover {
+  background-position-y: 100%
+}
