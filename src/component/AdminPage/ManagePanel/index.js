@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Label, Menu, Table, Button, Confirm } from 'semantic-ui-react';
+import { Table, Button, Confirm } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 const tempData = [
