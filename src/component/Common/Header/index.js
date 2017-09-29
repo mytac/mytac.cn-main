@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Icon } from 'semantic-ui-react';
 import './style.less';
 
@@ -13,7 +14,7 @@ export default function Header({ positionY, img }) {
         <div className="logo">
           <span>MyTac</span>
         </div>
-        <Icon name="diamond" size="small" />
+        <Link to={'/admin'}><Icon name="diamond" size="small" /></Link>
       </div>
     </div>
   );
