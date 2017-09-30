@@ -58,6 +58,7 @@
     "react-redux": "^5.0.5",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-totopbutton": "^1.0.5",
     "redux": "^3.7.2",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.72.0"

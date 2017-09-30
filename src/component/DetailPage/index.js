@@ -4,11 +4,10 @@ import {
   Link,
 } from 'react-router';
 
-import { Header, Footer } from '../Common';
+import { Header, Footer, ToTopButton } from '../Common';
 import Poster from './Poster';
 import Articles from './Articles';
 import LeaveMsg from './LeaveMsg';
-import ToTopButton from '../Common/ToTopButton';
 import './style.less';
 //               DetailPage:{id}
 // TODO: Header的背景图片为主内容中的图片，把props中的删了
